@@ -7,8 +7,8 @@
   "scripts": {
     "start": "cd src && ts-node-dev --respawn --transpile-only app.ts",
     "swagger-autogen": "ts-node swagger.ts",
-    "postinstall": "tsc",
-    "build": "rimraf build && ts-node build/app.js"
+    "preinstall": "npx tsc",
+    "build": "yarn && rimraf build && tsc -p . && ts-node build/app.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -27,7 +27,6 @@
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
-    "tsc": "^2.0.4",
     "typescript": "^4.8.4",
     "@types/bcrypt": "^5.0.0",
     "@types/busboy": "^1.5.0",
