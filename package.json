@@ -9,8 +9,8 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
-    "preinstall": "npx --package=typescript",
-    "build": "tsc node build/app.js"
+    "preinstall": "npx --package=typescript -- tsc",
+    "build": "node build/app.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
