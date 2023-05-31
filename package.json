@@ -11,7 +11,7 @@
   "scripts": {
     "start": "cd src && ts-node-dev --respawn --transpile-only app.ts",
     "swagger-autogen": "ts-node swagger.ts",
-    "preinstall": "npx --package=typescript && yarn && tsc",
+    "preinstall": "npx --package=typescript -- tsc",
     "build": "node build/app.js"
   },
   "dependencies": {
