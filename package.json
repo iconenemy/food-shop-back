@@ -11,7 +11,8 @@
   "scripts": {
     "start": "cd src && ts-node-dev --respawn --transpile-only app.ts",
     "swagger-autogen": "ts-node swagger.ts",
-    "preinstall": "npx --package=typescript -- tsc"
+    "preinstall": "npx --package=typescript && yarn && tsc",
+    "build": "node build/app.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
